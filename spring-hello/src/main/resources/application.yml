@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev # 可切换为 test / prod
+  application:
+    name: springboot-samples
+
+app:
+  version: 1.0.0
+
+---
+# 开发环境配置
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8081
+
+---
+# 测试环境配置
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8082
+
+---
+# 生产环境配置
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
+  port: 80
