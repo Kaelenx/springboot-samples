@@ -1,0 +1,30 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {}
+  },
+  "pages": [
+    {
+      "path": "pages/special/list",
+      "style": {
+        "navigationBarTitleText": "全部专题",
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 100,
+        "backgroundColor": "#f6f6f6"
+      }
+    },
+    {
+      "path": "pages/special/detail",
+      "style": {
+        "navigationBarTitleText": "专题详情",
+        "backgroundColor": "#f6f6f6"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "知乎专题",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f6f6f6"
+  }
+}

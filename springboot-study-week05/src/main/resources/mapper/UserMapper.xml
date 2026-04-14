@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 对应Mapper接口全限定名 -->
+<mapper namespace="com.cookie.springbootstudyweek05.mapper.UserMapper">
+
+    <!-- 条件查询：用户名模糊查询 + 年龄精确查询（动态SQL） -->
+    <select id="selectByCondition" resultType="com.cookie.springbootstudyweek05.entity.User">
+        SELECT * FROM t_user
+        <where>
+            <!-- 用户名模糊查询 -->
+            <if test="username != null and username != ''">
+                username LIKE CONCAT('%', #{username}, '%')
+            </if>
+            <!-- 年龄精确查询 -->
+            <if test="age != null">
+                AND age >= #{age}
+            </if>
+        </where>
+    </select>
+
+</mapper>

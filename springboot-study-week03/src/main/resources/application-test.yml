@@ -1,0 +1,22 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: springboot-week03
+
+
+app:
+  name: 企业后台管理系统 测试环境
+  version: 3.0.7
+  description: springboot 3.5.11 实战项目
+  envs: ["dev", "test", "prod"]
+  author:
+    name: cookie
+    website: https://github.com/cookie-code
+    email: test@qq.com
+
+  tokens: 2000
+  enabled: true
