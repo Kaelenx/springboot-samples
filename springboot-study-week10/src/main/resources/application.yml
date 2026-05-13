@@ -1,0 +1,46 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 244859845@qq.com
+    password: fheqnhzqvmwjbgjd
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+
+  # MySQL 数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/weather_db?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA 配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+custom:
+  teacher-email: 244859845@qq.com
+  stock-code: sh600519
+
+  # 生日邮件配置
+  birthday-email: 16422802@qq.com
+  birthday-name: "mqx"
+  birthday-month: 5
+  birthday-day: 12
+
+  # 和风天气 API 配置
+  qweather-api-host: kg78m32vp4.re.qweatherapi.com
+  qweather-api-key: 5b4560966fa44a2bb2bfafac59862d6d
+  qweather-location: 101190101
+  qweather-email: 244859845@qq.com
